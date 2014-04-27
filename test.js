@@ -18,14 +18,17 @@ test('fromarray many-element', function(t) {
   t.end();
 });
 
-test('fromarray invalid', function(t) {
-  t.throws(function() {
-    fromarray(undefined);
-  });
+test('fromarray non-array', function(t) {
+  t.equal(fromarray(undefined) === undefined, true);
+  t.equal(fromarray(null) === null, true);
 
-  t.throws(function() {
-    fromarray(null);
-  });
+  t.equal(fromarray(false) === false, true);
+  t.equal(fromarray(true) === true, true);
+  t.equal(fromarray(0), 0);
+  t.equal(fromarray(1), 1);
+  t.deepEqual(fromarray({}), {});
+  t.deepEqual(fromarray({1:2, 3:4}), {1:2, 3:4});
+  t.equal(fromarray(3.14), 3.14);
 
   t.end();
 });
