@@ -2,14 +2,21 @@
   "name": "fromarray",
   "description": "",
   "version": "0.0.1",
+  "main": "fromarray.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/fromarray.git"
   },
   "keywords": [
-    "voxel"
+    "array",
+    "conversion"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "scripts": {
+    "test": "node test.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^2.12.3"
+  }
 }
