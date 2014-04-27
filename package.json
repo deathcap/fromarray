@@ -17,6 +17,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "tape": "^2.12.3"
+    "tape": "^2.12.3",
+    "toarray": "0.0.1"
   }
 }

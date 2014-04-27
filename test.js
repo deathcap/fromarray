@@ -1,6 +1,7 @@
 'use strict';
 
 var fromarray = require('./');
+var toarray = require('toarray');
 var test = require('tape');
 
 test('fromarray zero-element', function(t) {
@@ -36,6 +37,14 @@ test('fromarray non-array', function(t) {
 test('fromarray array-like', function(t) {
   t.equal(fromarray({length:0}), undefined);
   t.equal(fromarray({length:1, 0:4}), 4);
+
+  t.end();
+});
+
+test('toarray/fromarray roundtrip', function(t) {
+  t.equal(fromarray(toarray(undefined)), undefined);
+  t.equal(fromarray(toarray(42)), 42);
+  t.deepEqual(fromarray(toarray([1,2,3])), [1,2,3]);
 
   t.end();
 });
