@@ -1,6 +1,6 @@
 {
   "name": "fromarray",
-  "description": "",
+  "description": "convert empty or singular arrays to scalars",
   "version": "0.0.1",
   "main": "fromarray.js",
   "repository": {
